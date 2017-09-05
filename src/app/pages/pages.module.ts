@@ -6,6 +6,7 @@ import {
   MdCardModule,
   MdInputModule,
   MdButtonModule,
+  MdRadioModule,
   MdToolbarModule,
   MdTabsModule,
   MdListModule,
@@ -18,6 +19,7 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 import { PagesRoutes } from './pages.routing';
 import { EditComponent } from './edit/edit.component';
+import { TabsComponent } from './tabs/tabs.component';
 
 @NgModule({
   imports: [
@@ -25,6 +27,7 @@ import { EditComponent } from './edit/edit.component';
     RouterModule.forChild(PagesRoutes),
     MdIconModule,
     MdCardModule,
+    MdRadioModule,
     MdInputModule,
     MdButtonModule,
     MdToolbarModule,
@@ -38,6 +41,7 @@ import { EditComponent } from './edit/edit.component';
   ],
   declarations: [
     EditComponent,
+    TabsComponent,
   ]
 })
 

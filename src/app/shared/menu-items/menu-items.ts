@@ -65,14 +65,14 @@ const MENUITEMS = [
       }
     ],
     children: [
-      {state: 'fullscreen', name: 'Overall Process'},
-      {state: 'editing', name: 'Transport Manager'},
-      {state: 'filter', name: 'Forklift Driver'}
+      {state: 'overall-process', name: 'Overall Process'},
+      {state: 'transport-manager', name: 'Transport Manager'},
+      {state: 'forklift-driver', name: 'Forklift Driver'}
     ]
   },
   
   {
-    state: 'taskboard',
+    state: 'charts',
     name: 'Reports',
     type: 'link',
     icon: 'show_chart',
@@ -84,38 +84,10 @@ const MENUITEMS = [
     icon: 'local_library'
   },
   {
-    state: 'charts',
+    state: 'taskboard',
     name: 'Support',
     type: 'link',
     icon: 'pages',
-  },
-  {
-    state: 'tables',
-    name: 'DATATABLE',
-    type: 'sub',
-    icon: 'format_line_spacing',
-    badge: [
-      {type: 'blue-grey', value: '8'
-      }
-    ],
-    children: [
-      {state: 'fullscreen', name: 'FULLSCREEN'},
-      {state: 'editing', name: 'EDITING'},
-      {state: 'filter', name: 'FILTER'},
-      {state: 'paging', name: 'PAGING'},
-      {state: 'sorting', name: 'SORTING'},
-      {state: 'pinning', name: 'PINNING'},
-      {state: 'selection', name: 'SELECTION'},
-    ]
-  },
-   {
-    state: 'pages',
-    name: 'PAGES',
-    type: 'sub',
-    icon: 'pages',
-    children: [
-      {state: 'user', name: 'USER'},
-    ]
   }
 ];
 

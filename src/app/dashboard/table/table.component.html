@@ -1,0 +1,26 @@
+<md-card class="demo-table-container demo-mat-table-example">
+
+  <table width="100%">
+    <tr align="center">
+      <th>Transport ID</th>
+      <th>Primary SID</th>
+      <th>ADR</th>
+      <th>Car Owner </th>
+      <th>Allocation</th>
+      <th>Process</th>
+      <th *ngIf="user.role != 'fd'">Options</th>
+    </tr>
+    <tr class="myclass" (click)="navigateTo(item)" align="center" *ngFor="let item of tableData">
+      <td>{{item.transport_id}}</td>
+      <td>{{item.primary_sid}}</td>
+      <td>{{item.ADR}}</td>
+      <td>{{item.car_owner}}</td>
+      <td>{{item.allocation}}</td>
+      <td>{{item.process}}</td>
+      <td *ngIf="user.role != 'fd'">
+        <button md-raised-button md-button-sm color="primary" class="mr-1">Edit</button>
+      </td>
+    </tr>
+  </table>
+
+</md-card>

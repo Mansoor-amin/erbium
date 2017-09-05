@@ -22,8 +22,14 @@ export class SigninComponent implements OnInit {
 
   onSubmit() {
     console.log(this.form.value)
-    this.AuthService.islogin = true;
-    this.router.navigate ( [ '/' ] );      
+    if(this.AuthService.login(this.form.value)){
+      this.router.navigate ( [ '/' ] );
+    }else{
+      if(this.AuthService.isLoggedIn){
+        this.router.navigate ( [ '/' ] );              
+      }
+    }
+    // this.router.navigate ( [ '/' ] );      
     // this.router.navigate ( [ '/dashboard' ] );
   }
 

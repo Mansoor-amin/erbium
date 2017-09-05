@@ -1,0 +1,108 @@
+
+    <md-card class="mat-card-top">
+      <md-tab-group>
+        <md-tab>
+          <ng-template md-tab-label>Documents</ng-template>
+          <md-card-content>
+            <md-list>
+              <md-list-item *ngFor="let system of systems">
+                <span fxFlex>{{system.id}}: </span>
+                <span fxFlex>{{system.question}}</span>
+                 <md-radio-group ng-model="system.answer">
+
+                  <md-radio-button value="yes" class="md-primary">Yes</md-radio-button>
+                  <md-radio-button value="no"> No </md-radio-button>
+                  <md-radio-button value="maybe">Maybe</md-radio-button>
+
+                </md-radio-group>
+              </md-list-item>
+            </md-list>
+          </md-card-content>
+        </md-tab>
+
+        <md-tab>
+          <ng-template md-tab-label>Condition </ng-template>
+          <md-card-content>
+            <md-list>
+              <md-list-item *ngFor="let system of systems">
+                <span fxFlex>{{system.id}}: </span>
+                <span fxFlex>{{system.question}}</span>
+                 <md-radio-group ng-model="system.answer">
+
+                  <md-radio-button value="yes" class="md-primary">Yes</md-radio-button>
+                  <md-radio-button value="no"> No </md-radio-button>
+                  <md-radio-button value="maybe">Maybe</md-radio-button>
+
+                </md-radio-group>
+              </md-list-item>
+            </md-list>
+          </md-card-content>
+        </md-tab>
+
+        <md-tab>
+          <ng-template md-tab-label>ADR</ng-template>
+          <md-card-content>
+            <md-list>
+              <md-list-item *ngFor="let system of systems">
+                <span fxFlex>{{system.id}}: </span>
+                <span fxFlex>{{system.question}}</span>
+                 <md-radio-group ng-model="system.answer">
+
+                  <md-radio-button value="yes" class="md-primary">Yes</md-radio-button>
+                  <md-radio-button value="no"> No </md-radio-button>
+                  <md-radio-button value="maybe">Maybe</md-radio-button>
+
+                </md-radio-group>
+              </md-list-item>
+            </md-list>
+          </md-card-content>
+        </md-tab>
+
+        <md-tab>
+          <ng-template md-tab-label>Packaging  </ng-template>
+          <md-card-content>
+            <md-list>
+              <md-list-item *ngFor="let system of systems">
+                <span fxFlex>{{system.id}}: </span>
+                <span fxFlex>{{system.question}}</span>
+                 <md-radio-group ng-model="system.answer">
+
+                  <md-radio-button value="yes" class="md-primary">Yes</md-radio-button>
+                  <md-radio-button value="no"> No </md-radio-button>
+                  <md-radio-button value="maybe">Maybe</md-radio-button>
+
+                </md-radio-group>
+              </md-list-item>
+            </md-list>
+          </md-card-content>
+        </md-tab>
+
+        <md-tab>
+          <ng-template md-tab-label>Confirmation</ng-template>
+          <md-card-content>
+            <md-list>
+              <md-list-item *ngFor="let system of systems">
+                <span fxFlex>{{system.id}}: </span>
+                <span fxFlex>{{system.question}}</span>
+                 <md-radio-group ng-model="system.answer">
+
+                  <md-radio-button value="yes" class="md-primary">Yes</md-radio-button>
+                  <md-radio-button value="no"> No </md-radio-button>
+                  <md-radio-button value="maybe">Maybe</md-radio-button>
+
+                </md-radio-group>
+              </md-list-item>
+            </md-list>
+          </md-card-content>
+        </md-tab>
+
+        
+
+        
+      </md-tab-group>
+      <hr>
+      <md-card-actions>
+        <button md-raised-button (click)="save()" class="shadow-none">Save</button>
+        <button md-raised-button  (click)="cancle()" color="primary">Cancel</button>
+      </md-card-actions>
+    </md-card>

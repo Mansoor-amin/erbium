@@ -1,0 +1,49 @@
+<md-card>
+  <md-card-content>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="text-xs-center pb-1">
+
+      <div><p class="logo logo1 text-xl-left">New transport</div>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="space-around">
+        <div class="pb-1">
+          <md-input-container style="width: 100%">
+            <input type="number" mdInput placeholder="Transport ID" [formControl]="form.controls['transport_id']">
+          </md-input-container>
+          <small *ngIf="form.controls['transport_id'].hasError('required') && form.controls['transport_id'].touched" class="mat-text-warn">Transport ID is required.</small>
+        </div>
+        <div class="pb-1">
+          <md-input-container style="width: 100%">
+            <input type="number" mdInput placeholder="Primary SID" [formControl]="form.controls['primary_sid']">
+          </md-input-container>
+          <small *ngIf="form.controls['primary_sid'].hasError('required') && form.controls['primary_sid'].touched" class="mat-text-warn">Transport ID is required.</small>
+        </div>
+        <div class="pb-1">
+          <md-input-container style="width: 100%">
+            <input mdInput type="text" placeholder="ADR" [formControl]="form.controls['ADR']">
+          </md-input-container>
+          <small *ngIf="form.controls['ADR'].hasError('required') && form.controls['ADR'].touched" class="mat-text-warn">ADR is required.</small>
+        </div>
+        <div class="pb-1">
+          <md-input-container style="width: 100%">
+            <input mdInput type="text" placeholder="Car Owner" [formControl]="form.controls['car_owner']">
+          </md-input-container>
+          <small *ngIf="form.controls['car_owner'].hasError('required') && form.controls['car_owner'].touched" class="mat-text-warn">ADR is required.</small>
+        </div>
+        <div class="pb-1">
+          <md-input-container style="width: 100%">
+            <input mdInput type="text" placeholder="allocation" [formControl]="form.controls['allocation']">
+          </md-input-container>
+          <small *ngIf="form.controls['allocation'].hasError('required') && form.controls['allocation'].touched" class="mat-text-warn">allocation is required.</small>
+        </div>
+        <div class="pb-1">
+          <md-input-container style="width: 100%">
+            <input mdInput type="text" placeholder="process" [formControl]="form.controls['process']">
+          </md-input-container>
+          <small *ngIf="form.controls['process'].hasError('required') && form.controls['process'].touched" class="mat-text-warn">process is required.</small>
+        </div>
+        <button md-raised-button color="primary" type="submit" [disabled]="!form.valid">add</button>
+      </div>
+    </form>
+  </md-card-content>
+</md-card>

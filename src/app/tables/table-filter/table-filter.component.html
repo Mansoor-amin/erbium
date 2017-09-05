@@ -1,3 +1,4 @@
+
 <br>
 <div class="title text-xl">
   User Management
@@ -16,3 +17,10 @@ class='material'
 [limit]="10"
 [rows]='rows'>
 </ngx-datatable>
+
+  <ng-template #actionTemp let-row="row" ngx-datatable-cell-template>
+    <div class="pb-1">
+          <button md-raised-button md-button-sm color="primary" (click)="edit(row.id-1)" class="mr-1">Edit</button>
+          <button md-raised-button md-icon-button md-button-sm color="warn" (click)="delete(row.id-1)" class="mr-1"><md-icon>power_settings_new</md-icon></button>
+        </div>
+  </ng-template>

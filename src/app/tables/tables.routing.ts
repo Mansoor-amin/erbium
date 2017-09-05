@@ -1,37 +1,25 @@
 import { Routes } from '@angular/router';
 
-import { DataTableComponent } from './data-table/data-table.component';
-import { TableEditingComponent } from './table-editing/table-editing.component';
-import { TableFilterComponent } from './table-filter/table-filter.component';
-import { TablePagingComponent } from './table-paging/table-paging.component';
-import { TablePinningComponent } from './table-pinning/table-pinning.component';
-import { TableSelectionComponent } from './table-selection/table-selection.component';
-import { TableSortingComponent } from './table-sorting/table-sorting.component';
+import { OverallProcessComponent } from './overall-process/overall-process.component';
+import { TransportManagerComponent } from './transport-manager/transport-manager.component';
+import { ForkliftDriverComponent } from './forklift-driver/forklift-driver.component';
+
 
 export const TablesRoutes: Routes = [
   {
     path: '',
-    children: [{
-      path: 'fullscreen',
-      component: DataTableComponent
-    }, {
-      path: 'editing',
-      component: TableEditingComponent
-    }, {
-      path: 'filter',
-      component: TableFilterComponent
-    }, {
-      path: 'paging',
-      component: TablePagingComponent
-    }, {
-      path: 'pinning',
-      component: TablePinningComponent
-    }, {
-      path: 'selection',
-      component: TableSelectionComponent
-    }, {
-      path: 'sorting',
-      component: TableSortingComponent
+    children: [
+    {
+      path: 'overall-process',
+      component: OverallProcessComponent
+    },
+    {
+      path: 'transport-manager',
+      component: TransportManagerComponent
+    },
+    {
+      path: 'forklift-driver',
+      component: ForkliftDriverComponent
     }]
   }
 ];
